@@ -1,0 +1,16 @@
+$font-name: "Roboto";
+$font-path: "../fonts/";
+
+$font-weights: (
+    400:"Regular",
+    500:"Medium",
+);
+
+@each $weight,$weight-name in $font-weights{
+    @font-face {
+        font-family: $font-name;
+        src: url("#{$font-path}#{$font-name}-#{$weight-name}.ttf");
+        font-style: normal;
+        font-weight: $weight;
+    }
+}

@@ -1,0 +1,38 @@
+.nav {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3), 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    background: #f3edf7;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    position: sticky;
+    top: 0;
+
+    & h1 {
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 127%;
+        text-align: center;
+        color: #1c1b1f;
+    }
+
+    & button {
+        width: 36px;
+        height: 36px;
+    }
+
+    & input {
+        width: 90%;
+        background: none;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 125%;
+        color: #9d9d9d;
+
+        &::placeholder {
+            color: #9d9d9d;
+
+        }
+    }
+}
