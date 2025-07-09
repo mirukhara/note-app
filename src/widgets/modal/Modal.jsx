@@ -5,18 +5,21 @@ const Modal = ({
     addNote,
     modalEditMode,
     closeModal,
-    title, setTitle, descr, setDescr, editNote
+    title, setTitle, descr, setDescr,
+    editNote,
 }) => {
     return (
         <div className={`modal ${showModal ? 'active' : ''}`} onClick={closeModal}>
-            <div className="modal-dialog" 
-            onClick={(e) => e.stopPropagation()}>
+            <div
+                className="modal-dialog"
+                onClick={(e) => e.stopPropagation()}
+            >
                 <h2>{modalEditMode ? 'Изменить заметку' : 'Добавить заметку'}</h2>
                 <label htmlFor="title">
                     <span>Заголовок</span>
                     <input id="title" type="text" placeholder="Заголовок"
                         value={title} onChange={(e) => setTitle(e.target.value)}
-                    
+
                     />
                 </label>
                 <label htmlFor="note">
@@ -24,7 +27,7 @@ const Modal = ({
                     <input id="note" type="text" placeholder="Заметка"
                         value={descr} onChange={(e) => setDescr(e.target.value)}
                         onKeyDown={(e) => {
-                            if(e.key == 'Enter') {
+                            if (e.key == 'Enter') {
                                 addNote();
                             }
                         }}
@@ -32,12 +35,12 @@ const Modal = ({
                 </label>
                 <div className="modal-dialog-options">
                     <button onClick={closeModal}>Отмена</button>
-                        {
-                            modalEditMode?
+                    {
+                        modalEditMode ?
                             <button onClick={editNote}>Изменить</button>
                             :
-                    <button onClick={addNote}>Добавить</button>
-                }
+                            <button onClick={addNote}>Добавить</button>
+                    }
                 </div>
             </div>
         </div>

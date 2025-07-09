@@ -15,6 +15,7 @@ const App = () => {
   const [pickedNoteId, setPickedNoteId] = useState('');
   const [search, setSearch] = useState('');
 
+
   useEffect(() => {
     const localData = localStorage.getItem('notes');
     if (localData) {
@@ -50,16 +51,13 @@ const App = () => {
         descr: descr ? descr : 'Нет заметки',
         date: new Date().toLocaleDateString(),
       };
-
       notes[editedNoteIndex] = note;
-      const allNotes = ([...notes]);
+      const allNotes = [...notes];
       localStorage.setItem('notes', JSON.stringify([...allNotes]));
       setNotes([...allNotes]);
       closeModal();
-
     }
-  };
-
+  }
 
   const closeModal = () => {
     setShowModal(false);
@@ -85,7 +83,7 @@ const App = () => {
         search={search}
         setSearch={setSearch}
       />
-      <Main notes={filteredNotes} showEditModal={showEditModal} removeNote={removeNote} editNote={editNote} />
+      <Main notes={filteredNotes} showEditModal={showEditModal} removeNote={removeNote} />
       <AddNoteButton
         showModal={showModal}
         setShowModal={setShowModal}

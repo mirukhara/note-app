@@ -1,7 +1,6 @@
-import NotesListItem from "./notesListItem";
+import NotesListItem from "./NotesListItem";
 
-const NotesList = ({ gridMode, notes, showEditModal, removeNote, }) => {
-
+const NotesList = ({ gridMode, notes, showEditModal, removeNote }) => {
     return (
         <div className={`notes__list container ${gridMode ? '' : 'list'}`}>
             {

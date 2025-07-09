@@ -1,7 +1,7 @@
 import NotesContainer from "./NotesContainer";
 import './Main.scss';
 import { useState } from "react";
-const Main = ({ notes, showEditModal, removeNote,  }) => {
+const Main = ({ notes, showEditModal, removeNote, }) => {
     const [gridMode, setGridMode] = useState(false);
     return (
         <main>
@@ -11,7 +11,6 @@ const Main = ({ notes, showEditModal, removeNote,  }) => {
                 notes={notes}
                 showEditModal={showEditModal}
                 removeNote={removeNote}
-
             />
         </main>
     )

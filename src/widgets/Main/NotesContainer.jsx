@@ -2,7 +2,7 @@ import listIcon from '../../assets/icons/list.svg';
 import gridIcon from '../../assets/icons/grid.svg';
 import NotesList from "./NotesList";
 
-const NotesContainer = ({ gridMode, setGridMode, notes, showEditModal, removeNote,  }) => {
+const NotesContainer = ({ gridMode, setGridMode, notes, showEditModal, removeNote}) => {
 
     return (
         <section className="notes">
@@ -13,7 +13,7 @@ const NotesContainer = ({ gridMode, setGridMode, notes, showEditModal, removeNot
                     <span>{gridMode ? 'Список' : 'Сетка'}</span>
                 </button>
             </div>
-            <NotesList gridMode={gridMode} notes={notes} showEditModal={showEditModal} removeNote={removeNote} />
+            <NotesList gridMode={gridMode} notes={notes} showEditModal={showEditModal} removeNote={removeNote}  />
         </section>
     )
 }

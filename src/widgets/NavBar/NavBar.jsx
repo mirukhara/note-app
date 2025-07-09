@@ -9,7 +9,9 @@ export const NavBar = ({ searchMode, setSearchMode, search, setSearch }) => {
                 :
                 <div></div>
             }
-            {searchMode ? <input type="text" placeholder="Поиск..." value={search} onChange={(e) => setSearch(e.target.value)} /> : <h1>Заметки</h1>}
+            {searchMode ?
+                <input type="text" placeholder="Поиск..." value={search}
+                    onChange={(e) => setSearch(e.target.value)} /> : <h1>Заметки</h1>}
             <Button type={searchMode ? 'remove' : 'search'} onClick={() => setSearchMode(prev => !prev)} />
         </nav>
     );
