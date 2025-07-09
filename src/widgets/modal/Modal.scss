@@ -50,8 +50,6 @@
                 line-height: 133%;
                 letter-spacing: 0.03em;
                 color: #6750a4;
-
-              
             }
 
             & input {
@@ -68,30 +66,6 @@
             width: 100%;
             display: flex;
             justify-content: end;
-
-            & button{
-
-            font-weight: 500;
-            font-size: 14px;
-            line-height: 143%;
-            letter-spacing: 0.01em;
-            text-transform: uppercase;
-            text-align: center;
-            color: #6750a4;
-                padding: 12px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                gap: 12px;
-                background: none;
-                cursor: pointer;
-
-                &:nth-of-type(1){
-                    
-                        color: #cf1b1b;
-                    
-                }
-            }
         }
     }
 }
