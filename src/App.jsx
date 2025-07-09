@@ -2,8 +2,9 @@ import { useEffect, useState } from "react";
 import { NavBar } from "./widgets/NavBar/NavBar";
 import Main from "./widgets/Main/Main";
 import AddNoteButton from "./widgets/AddNoteButton/AddNoteButton";
-import Modal from "./widgets/Modal/Modal";
+
 import { v4 as uuidv4 } from 'uuid';
+import Modal from "./widgets/Modal/Modal";
 
 const App = () => {
   const [searchMode, setSearchMode] = useState(false);
